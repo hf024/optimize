@@ -496,4 +496,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	var pizzasDiv = document.getElementById("randomPizzas");
 	pizzasDiv.appendChild(pizzaElementGenerator(i));
   }
+
+  document.getElementById('store-image').src="images/pizzeria.jpg" 
 });
