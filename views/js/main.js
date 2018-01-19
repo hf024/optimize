@@ -485,6 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   var pizzaTotal = getPizzaTotal(256, cols)
+  var parentDom = document.getElementById("movingPizzas1")
   for (var i = 0; i < pizzaTotal; i++) {
 	var elem = document.createElement('img');
     elem.className = 'mover';
@@ -493,13 +494,13 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.getElementById("movingPizzas1").appendChild(elem);
+    parentDom.appendChild(elem);
   }
   updatePositions();
   
   // 仅当DOM加载完成后，创建并插入了所有的披萨
+  var pizzasDiv = document.getElementById("randomPizzas");
   for (var i = 2; i < 100; i++) {
-	var pizzasDiv = document.getElementById("randomPizzas");
 	pizzasDiv.appendChild(pizzaElementGenerator(i));
   }
 
