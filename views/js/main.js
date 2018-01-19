@@ -474,7 +474,6 @@ function updatePositions() {
 
 //  披萨数量 = (浏览器高度 / 背景披萨高度) * cols
 function getPizzaTotal (pizzaHeight, cols) {
-	console.log(window.innerHeight, screen.height)
 	return Math.ceil(window.innerHeight / pizzaHeight )  * cols
 }
 
